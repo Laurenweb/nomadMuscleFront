@@ -1,0 +1,20 @@
+<div class="roomSection">
+  <div class="room" *ngFor="let room of rooms">
+    <div class="containerRoom">
+      <a href="salles/{{ room._id }}">
+        <div class="roomPhoto"> <img class="roomImg" src="{{ room.photos[0].url }}" alt="{{ room.photos[0].libelle }}"> </div>
+        <div class="roomDesc"> 
+          <div class="roomLibelle">{{ room.libelle }}</div>
+          <div class="roomDetails">
+            <div class="roomPrice">
+              {{ room.tarifHoraire }}€/h
+            </div>
+            <div class="roomCountry">
+                {{ room.adresse.ville }}
+              </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
