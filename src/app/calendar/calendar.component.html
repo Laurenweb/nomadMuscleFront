@@ -1,0 +1,24 @@
+<div id="calendar" class="calendar">
+    <!-- <div id="calendar_days" class="calendar_days" [innerHtml]="divMonth"> -->
+    <!-- </div> -->
+    <ng-container *ngIf="!show">
+      <div id="calendar_month" class="month" *ngFor="let aMonth of month;let i = index;" (click)="displayMonth(); daysInMonthCalendar(i + 1);">
+        {{aMonth}}
+      </div>
+    </ng-container>
+    <ng-container *ngIf="show">
+      <span (click)="displayMonth()"> Fermer </span>
+      <div id="calendar_days" class="calendar_days">
+        <div class="days"  *ngFor="let day of days">
+          <span>{{ day }}</span>
+          <span class="add_calendar">
+            <div class="add_plus">+</div>
+          </span>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="">
+
+    </ng-container>
+</div>
+  

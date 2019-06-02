@@ -1,0 +1,78 @@
+.roomSection {
+    height: 100%;
+    width: 100%;
+    background-color: #f0f1f5;
+}
+.roomSection a:link, .roomSection a:visited, .roomSection a:hover, .roomSection a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.room {
+    display: inline-table;
+    height: 30%;
+    width: 50%;
+}
+
+.containerRoom {
+    cursor: pointer;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.roomPhoto {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 45%;
+    overflow: hidden;
+}
+.roomPhoto img {
+    position: absolute;
+    min-height: 100%;
+    height: auto;
+    min-width: 100%;
+    width: auto;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    z-index: 0;
+    -webkit-transform:translate(-50%, -50%);
+    -moz-transform:translate(-50%, -50%);
+    -ms-transform:translate(-50%, -50%);
+    -o-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+}
+
+.roomDesc {
+    float: right;
+    margin: 1%;
+    height: 100%;
+    width: 50%;
+}
+
+.roomLibelle {
+    width: 100%;
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.roomDetails {
+    padding: 10% 0 10% 0;
+    width: 100%;
+}
+.roomPrice {
+    width: 50%;
+    float: right;
+    text-align: right;
+    font-size: 1.3em;
+    font-weight: 300;
+    color: #b8bcc1;
+}
+
+.roomCountry {
+    width: 50%;
+    text-align: left;
+}

@@ -1,0 +1,23 @@
+<div class="mainContainer">
+  <div class="roomCover"><img src="" alt=""></div>
+  <div class="roomTitle"></div>
+  <div class="roomDetails">
+      <div class="roomAddressSection">
+          <div class="roomAddress">{{ room.nombreUtilisateurs }}</div>
+          <!-- <div class="roomSpaceroomAddressLabel">Adresse</div> -->
+        </div>
+    <div class="roomDimensionSection">
+      <div class="roomDimension">{{ room.nombreUtilisateurs }}</div>
+      <div class="roomDimensionLabel">Superficie</div>
+    </div>
+    <div class="roomSpaceSection">
+      <div class="roomSpace">{{ room.nombreUtilisateurs }}</div>
+      <div class="roomSpaceLabel">Nombre d'utilisateurs</div>
+    </div>
+    <div class="roomEquipementSection">
+        <div class="roomEquipement" *ngFor="let oneEquipement of equipement">{{ room.nombreUtilisateurs }}</div>
+        <div class="roomEquipementLabel">Nombre d'utilisateurs</div>
+      </div>
+  </div>
+  <div class="roomReservation"></div>
+</div>

@@ -1,0 +1,12 @@
+.mainContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.roomCover {
+    height: 30%;
+    width: 100%;
+}
+.roomCover img {
+    width: 100%;
+}
