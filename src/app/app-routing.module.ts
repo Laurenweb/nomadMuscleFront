@@ -15,7 +15,7 @@ const routes: Routes = [
     component: DetailSalleComponent
   }, 
   // {
-  // path: 'reservation',
+  // path: 'salles/reservation/:id',
   //   component: CalendarComponent
   // },
   {
