@@ -7,14 +7,14 @@ import { AppComponent } from './app.component';
 import { SallesComponent } from './salles/salles.component';
 import { SalleService } from './salle.service';
 import { HttpClientModule } from '@angular/common/http';
-// import { DetailSalleComponent } from './detail-salle/detail-salle.component';
+import { DetailSalleComponent } from './detail-salle/detail-salle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     // CalendarComponent,
     SallesComponent,
-    // DetailSalleComponent
+    DetailSalleComponent
   ],
   imports: [
     BrowserModule,

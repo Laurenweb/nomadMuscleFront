@@ -1,23 +1,41 @@
 <div class="mainContainer">
-  <div class="roomCover"><img src="" alt=""></div>
-  <div class="roomTitle"></div>
+  <div class="roomCover"><img src="{{ room.photos[0].url }}" alt="{{ room.photos[0].libelle }}"></div>
+  <div class="roomTitle"><h1> {{ room.libelle }} </h1></div>
   <div class="roomDetails">
-      <div class="roomAddressSection">
-          <div class="roomAddress">{{ room.nombreUtilisateurs }}</div>
-          <!-- <div class="roomSpaceroomAddressLabel">Adresse</div> -->
-        </div>
-    <div class="roomDimensionSection">
-      <div class="roomDimension">{{ room.nombreUtilisateurs }}</div>
-      <div class="roomDimensionLabel">Superficie</div>
-    </div>
-    <div class="roomSpaceSection">
-      <div class="roomSpace">{{ room.nombreUtilisateurs }}</div>
-      <div class="roomSpaceLabel">Nombre d'utilisateurs</div>
-    </div>
-    <div class="roomEquipementSection">
-        <div class="roomEquipement" *ngFor="let oneEquipement of equipement">{{ room.nombreUtilisateurs }}</div>
-        <div class="roomEquipementLabel">Nombre d'utilisateurs</div>
+      <div class="roomAddressSection roomDetailSection">
+          <div class="roomAddressMarker roomIcon"><img src="assets/images/iconfinder_location.svg" alt="Marqueur"></div>
+          <div class="roomAddressNum">{{ room.adresse.numero }}</div>
+          <div class="roomAddressStreet">{{ room.adresse.rue }}</div>
+          <div class="roomAddressCountry">{{ room.adresse.ville }}</div>
+          <div class="roomAddressCode">{{ room.adresse.cp }}</div>
       </div>
+    <div class="roomDimensionSection roomDetailSection">
+      <div class="roomDimensionRuler roomIcon"><img src="assets/images/iconfinder_Ruler.svg" alt="Dimension"></div>
+      <div class="roomDimensionLabel">Superficie</div>
+      <div class="roomDimension">{{ room.dimensions }}</div>
+    </div>
+    <div class="roomSpaceSection roomDetailSection">
+      <div class="roomnSpaceUser roomIcon"><img src="assets/images/iconfinder_user_full.svg" alt="Utilisateurs"></div>
+      <div class="roomSpaceLabel">Nombre d'utilisateurs</div>
+      <div class="roomSpace">{{ room.nombreUtilisateurs }}</div>
+    </div>
+    <div class="roomEquipementSection roomDetailSection">
+      <div class="roomEquipementDumbbell roomIcon"><img src="assets/images/iconfinder_dumbbell.svg" alt="Equipements"></div>
+      <div class="roomEquipementLabel">Equipements</div>
+      <div class="roomEquipement" *ngFor="let oneEquipement of room.equipement">{{ oneEquipement.description }}</div>
+    </div>
+    <div class="roomServicesSection roomDetailSection">
+      <div class="roomServicesDumbbell roomIcon"><img src="assets/images/iconfinder_services.svg" alt="Services"></div>
+      <div class="roomServicesLabel">Service(s) disponible(s)</div>
+      <div class="roomServices" *ngFor="let service of room.services">{{ service.libelle }}</div>
+    </div>
+    <div class="roomPriceSection roomDetailSection">
+      <div class="roomPriceDumbbell roomIcon"><img src="assets/images/iconfinder_price_tag_euro.svg" alt="Devise"></div>
+      <div class="roomPrice">{{ room.tarifHoraire }}</div>
+      <!-- <div class="roomPriceLabel">Tarif horaire</div> -->
+    </div>
   </div>
-  <div class="roomReservation"></div>
+  <div class="roomReservation">
+    <div class="btnReservation">Réserver</div>
+  </div>
 </div>
